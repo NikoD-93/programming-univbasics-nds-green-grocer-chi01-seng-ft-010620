@@ -175,7 +175,7 @@ end
 
 def checkout(cart, coupons)
   grouped_cart = consolidate_cart(cart)
-  discounted_cart = apply_coupons(grouped_cart_cart)
+  discounted_cart = apply_coupons(grouped_cart_cart, coupons)
   final = apply_clearance(discounted_cart)
   
   total = 0 
