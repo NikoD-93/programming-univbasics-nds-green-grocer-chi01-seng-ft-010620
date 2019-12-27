@@ -174,6 +174,19 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
+  grouped_cart = consolidate_cart(cart)
+  discounted_cart = apply_coupons(grouped_cart_cart)
+  final = apply_clearance(discounted_cart)
+  
+  total = 0 
+  i = 0 
+  while i < final.length
+  total += final[i][:price] * (final[i][:count])
+  i += 1 
+  
+end
+
+
   # Consult README for inputs and outputs
   #
   # This method should call
@@ -183,4 +196,3 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-end
